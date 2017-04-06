@@ -1,0 +1,594 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a>gramophone (v0.0.3)</a>
+</h1>
+<h4>extracts most frequently used keywords and phrases from text</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gramophone">module gramophone</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gramophone.TextStream">
+            function <span class="apidocSignatureSpan">gramophone.</span>TextStream
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gramophone.combine">
+            function <span class="apidocSignatureSpan">gramophone.</span>combine
+            <span class="apidocSignatureSpan">(phrases, cutoff)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gramophone.extract">
+            function <span class="apidocSignatureSpan">gramophone.</span>extract
+            <span class="apidocSignatureSpan">(text, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gramophone.stream">
+            function <span class="apidocSignatureSpan">gramophone.</span>stream
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gramophone.transformStream">
+            function <span class="apidocSignatureSpan">gramophone.</span>transformStream
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gramophone.</span>TextStream.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gramophone.TextStream">module gramophone.TextStream</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gramophone.TextStream.TextStream">
+            function <span class="apidocSignatureSpan">gramophone.</span>TextStream
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gramophone.TextStream.super_">
+            function <span class="apidocSignatureSpan">gramophone.TextStream.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gramophone.TextStream.prototype">module gramophone.TextStream.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gramophone.TextStream.prototype.end">
+            function <span class="apidocSignatureSpan">gramophone.TextStream.prototype.</span>end
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gramophone.TextStream.prototype.write">
+            function <span class="apidocSignatureSpan">gramophone.TextStream.prototype.</span>write
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gramophone" id="apidoc.module.gramophone">module gramophone</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gramophone.TextStream" id="apidoc.element.gramophone.TextStream">
+        function <span class="apidocSignatureSpan">gramophone.</span>TextStream
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">TextStream = function (options){
+  this.options = options;
+  this.readable = true;
+  this.writable = true;
+  this.buffer = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+return combined;
+};
+
+// Text stream. Reads a text stream and emits keywords. Warning: this stream
+// behaves like a sink and will buffer all data until the source emits end.
+exports.stream = function(options){
+return new exports.<span class="apidocCodeKeywordSpan">TextStream</span>(options);
+};
+
+exports.TextStream = function(options){
+this.options = options;
+this.readable = true;
+this.writable = true;
+this.buffer = [];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gramophone.combine" id="apidoc.element.gramophone.combine">
+        function <span class="apidocSignatureSpan">gramophone.</span>combine
+        <span class="apidocSignatureSpan">(phrases, cutoff)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">combine = function (phrases, cutoff){
+  var combined = _.clone(phrases);
+
+  _.each(_.keys(phrases), function(phrase){
+    var ngramToTry, subPhrases;
+    ngramToTry = phrase.split(' ').length - 1;
+
+    if (ngramToTry &lt; 1) return;
+
+    _.each(natural.NGrams.ngrams(phrase, ngramToTry), function(ngram){
+      var subPhrase = ngram.join(' ');
+      if (phrases[subPhrase]){
+        if (!cutoff || (phrases[phrase] / phrases[subPhrase]) &gt;= (1 - cutoff)){
+          delete combined[subPhrase];
+        }
+      }
+    });
+  });
+
+  return combined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+// Convert results to a hash
+_.each(results, function(result){
+  combinedResults[result.term] = result.tf;
+});
+
+// Combine results from each ngram to remove redundancy phrases
+combined = exports.<span class="apidocCodeKeywordSpan">combine</span>(combinedResults, options.cutoff);
+
+// Convert to a list of objects sorted by tf (term frequency)
+combined = _.chain(combined)
+  .pairs()
+  .sortBy(_.last)
+  .reverse()
+  .map(function(combination){ return {term: combination[0], tf: combination[1] }; })
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gramophone.extract" id="apidoc.element.gramophone.extract">
+        function <span class="apidocSignatureSpan">gramophone.</span>extract
+        <span class="apidocSignatureSpan">(text, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extract = function (text, options){
+  var results = [];
+  var keywords = {};
+  var combined, combinedResults = {};
+  var unstemmed = {};
+
+  var stem = function(word){
+    // only bother stemming if the word will be used
+    if (!usePhrase(word, options)) return word;
+    var stem = natural.PorterStemmer.stem(word);
+    // Store the shortest word that matches this stem for later destemming
+    if (!unstemmed.hasOwnProperty(stem) || word.length &lt; unstemmed[stem].length){
+      unstemmed[stem] = word;
+    }
+    return stem;
+  };
+
+  var destem = function(stem){
+    return unstemmed[stem];
+  };
+
+  if (!text) return [];
+  if (typeof text !== 'string') text = text.toString();
+
+  if (!options) options = {};
+  if (!options.ngrams){
+    options.ngrams = [1, 2, 3];
+  }else if (typeof options.ngrams === 'number'){
+    options.ngrams = [options.ngrams];
+  }
+  if (!options.cutoff) options.cutoff = 0.5;
+  if (!options.min) options.min = 2;
+  if (!options.stopWords) options.stopWords = [];
+  if (!options.startWords) options.startWords = [];
+  if (options.html){
+    text = stripTags(text);
+  }
+
+  // For each ngram, extract the most frequent phrases (taking into account
+  // stop and start words lists)
+  _.each(options.ngrams, function(ngram){
+    var keywordsForNgram;
+    var tf = new Tf();
+    var tokenized = _.map(natural.NGrams.ngrams(text, ngram), function(ngram){
+      if (options.stem){
+        ngram = _.map(ngram, stem);
+      }
+      return ngram.join(' ').toLowerCase();
+    });
+    tf.addDocument(tokenized);
+    keywordsForNgram = tf.listMostFrequestTerms(0);
+    keywordsForNgram = _.select(keywordsForNgram, function(item){
+      return usePhrase(item.term, options);
+    });
+    results = results.concat(keywordsForNgram);
+  });
+
+  // Convert results to a hash
+  _.each(results, function(result){
+    combinedResults[result.term] = result.tf;
+  });
+
+  // Combine results from each ngram to remove redundancy phrases
+  combined = exports.combine(combinedResults, options.cutoff);
+
+  // Convert to a list of objects sorted by tf (term frequency)
+  combined = _.chain(combined)
+    .pairs()
+    .sortBy(_.last)
+    .reverse()
+    .map(function(combination){ return {term: combination[0], tf: combination[1] }; })
+    .value();
+
+  // Only return results over a given frequency (default is 2 or more)
+  if (options.min){
+    combined = _.select(combined, function(result){
+      return result.tf &gt;= options.min;
+    });
+  }
+
+  // If stemming was used, remap words back
+  if (options.stem){
+    combined.forEach(function(result){
+      result.term = _.map(result.term.split(' '), destem).join(' ');
+    });
+  }
+
+  if (options.flatten){
+    // Flatten the results so that there is a list item for every occurence of
+    // the term
+    combined = _.flatten(
+      _.map(combined, function(result){
+        var flattened = [];
+        for (var i=0; i &lt; result.tf; i++){
+          flattened.push(result.term);
+        }
+        return flattened;
+      })
+    );
+  }else{
+    // Return results with scores or without depending on options
+    combined =  options.score ? combined : _.pluck(combined, 'term');
+  }
+
+
+  // Limit the results
+  if (options.limit){
+    combined = combined.slice(0, options.limit);
+  }
+
+  return combined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  * &lt;a href="#extract"&gt;&lt;code&gt;gramophone.&lt;b&gt;extract()&lt;/b&gt;&lt;/code&gt;&lt;
+;/a&gt;
+  * &lt;a href="#stream"&gt;&lt;code&gt;gramophone.&lt;b&gt;stream()&lt;/b&gt;&lt;/code&gt;&lt;/
+a&gt;
+  * &lt;a href="#transformStream"&gt;&lt;code&gt;gramophone.&lt;b&gt;transformStream()&lt;/b&gt;&lt;/
+code&gt;&lt;/a&gt;
+
+--------------------------------------------------------
+&lt;a name="extract"&gt;&lt;/a&gt;
+### gramophone.<span class="apidocCodeKeywordSpan">extract</span>(text[, options])
+
+Synchronously extracts keywords from the text. By
+default it returns any keyword phrases that occur more than once. It also
+removes any common English words. It returns the results reverse ordered by
+frequency i.e. the first result is the most common phrase.
+
+```js
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gramophone.stream" id="apidoc.element.gramophone.stream">
+        function <span class="apidocSignatureSpan">gramophone.</span>stream
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stream = function (options){
+  return new exports.TextStream(options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Extracts most frequently used keywords and phrases from text. It excludes
+common stop words. It can be configured to extract arbitary length phrases
+(ngrams) rather than just keywords.
+
+```js
+request('https://github.com/substack/stream-handbook/blob/master/readme.markdown')
+  .pipe(gramophone.<span class="apidocCodeKeywordSpan">stream</span>({ngrams: 2, html: true, limit: 2}))
+  .on('data', console.error.bind(console));
+```
+
+Would write out:
+```
+readable stream
+writable stream
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gramophone.transformStream" id="apidoc.element.gramophone.transformStream">
+        function <span class="apidocSignatureSpan">gramophone.</span>transformStream
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">transformStream = function (options){
+  if (!options) options = {};
+
+  return es.through(function write(data){
+    var from = options.from;
+    var text = from &amp;&amp; data.hasOwnProperty(from) ? data[from] : data;
+    var keywords = exports.extract(text, options);
+    if (options.to){
+      data[options.to] = keywords;
+      this.emit('data', data);
+    }else{
+      this.emit('data', keywords);
+    }
+  });
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+stream behaves like a sink and will buffer the stream completely before emitting
+keywords.
+
+See first example.
+
+--------------------------------------------------------
+&lt;a name="transformStream"&gt;&lt;/a&gt;
+### gramophone.<span class="apidocCodeKeywordSpan">transformStream</span>([options])
+
+Returns a through stream that reads in the stream and emits keywords for each
+data read. By default, it assumes that each data read in a string. Alternatively
+the stream can read and write to objects. To read
+the text from an object property, specify the `from` option. If you want to
+write the keywords back to the object, also specify the `to` option.
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gramophone.TextStream" id="apidoc.module.gramophone.TextStream">module gramophone.TextStream</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gramophone.TextStream.TextStream" id="apidoc.element.gramophone.TextStream.TextStream">
+        function <span class="apidocSignatureSpan">gramophone.</span>TextStream
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">TextStream = function (options){
+  this.options = options;
+  this.readable = true;
+  this.writable = true;
+  this.buffer = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+return combined;
+};
+
+// Text stream. Reads a text stream and emits keywords. Warning: this stream
+// behaves like a sink and will buffer all data until the source emits end.
+exports.stream = function(options){
+return new exports.<span class="apidocCodeKeywordSpan">TextStream</span>(options);
+};
+
+exports.TextStream = function(options){
+this.options = options;
+this.readable = true;
+this.writable = true;
+this.buffer = [];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gramophone.TextStream.super_" id="apidoc.element.gramophone.TextStream.super_">
+        function <span class="apidocSignatureSpan">gramophone.TextStream.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Stream() {
+  EE.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gramophone.TextStream.prototype" id="apidoc.module.gramophone.TextStream.prototype">module gramophone.TextStream.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gramophone.TextStream.prototype.end" id="apidoc.element.gramophone.TextStream.prototype.end">
+        function <span class="apidocSignatureSpan">gramophone.TextStream.prototype.</span>end
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">end = function (data){
+  var stream = this;
+  if (data) this.write(data);
+  exports.extract(this.buffer.join(''), this.options).forEach(function(phrase){
+    stream.emit('data', phrase);
+  });
+  stream.emit('end');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+the stream can read and write to objects. To read
+the text from an object property, specify the `from` option. If you want to
+write the keywords back to the object, also specify the `to` option.
+
+```js
+var stream = gramophone.transformStream({from: 'text', to: 'keywords'});
+stream.write({ text: 'foo and bar and foo'});
+stream.<span class="apidocCodeKeywordSpan">end</span>();
+```
+
+Emits the data: `{ text: 'foo and bar and foo', keywords: [foo] }`.
+
+Related projects
+----------------
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gramophone.TextStream.prototype.write" id="apidoc.element.gramophone.TextStream.prototype.write">
+        function <span class="apidocSignatureSpan">gramophone.TextStream.prototype.</span>write
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">write = function (data){
+  this.buffer.push(data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+data read. By default, it assumes that each data read in a string. Alternatively
+the stream can read and write to objects. To read
+the text from an object property, specify the `from` option. If you want to
+write the keywords back to the object, also specify the `to` option.
+
+```js
+var stream = gramophone.transformStream({from: 'text', to: 'keywords'});
+stream.<span class="apidocCodeKeywordSpan">write</span>({ text: 'foo and bar and foo'});
+stream.end();
+```
+
+Emits the data: `{ text: 'foo and bar and foo', keywords: [foo] }`.
+
+Related projects
+----------------
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
