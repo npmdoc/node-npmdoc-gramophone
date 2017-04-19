@@ -1,20 +1,23 @@
-<svg height="270" width="720" xmlns="http://www.w3.org/2000/svg">
-<rect height="270" fill="#555" width="720"></rect>
+<svg height="318" width="720" xmlns="http://www.w3.org/2000/svg">
+<rect height="318" fill="#555" width="720"></rect>
 <text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
-<tspan x="10" y="26">└─┬ gramophone@0.0.3 </tspan>
-<tspan x="10" y="42">  ├─┬ event-stream@3.0.20 </tspan>
-<tspan x="10" y="58">  │ ├── duplexer@0.1.1 </tspan>
-<tspan x="10" y="74">  │ ├── from@0.1.7 </tspan>
-<tspan x="10" y="90">  │ ├── map-stream@0.0.7 </tspan>
-<tspan x="10" y="106">  │ ├── pause-stream@0.0.11 </tspan>
-<tspan x="10" y="122">  │ ├── split@0.2.10 </tspan>
-<tspan x="10" y="138">  │ ├── stream-combiner@0.0.4 </tspan>
-<tspan x="10" y="154">  │ └── through@2.3.8 </tspan>
-<tspan x="10" y="170">  ├── lodash@0.8.2 </tspan>
-<tspan x="10" y="186">  ├─┬ natural@0.1.29 </tspan>
-<tspan x="10" y="202">  │ ├── apparatus@0.0.9 </tspan>
-<tspan x="10" y="218">  │ ├── sylvester@0.0.21 </tspan>
-<tspan x="10" y="234">  │ └── underscore@1.8.3 </tspan>
-<tspan x="10" y="250">  └── underscore.string@2.3.3</tspan>
+<tspan x="10" y="26">12 megabytes installed</tspan>
+<tspan x="10" y="42"></tspan>
+<tspan x="10" y="58">node_modules</tspan>
+<tspan x="10" y="74">└─┬ gramophone@0.0.3 </tspan>
+<tspan x="10" y="90">  ├─┬ event-stream@3.0.20 </tspan>
+<tspan x="10" y="106">  │ ├── duplexer@0.1.1 </tspan>
+<tspan x="10" y="122">  │ ├── from@0.1.7 </tspan>
+<tspan x="10" y="138">  │ ├── map-stream@0.0.7 </tspan>
+<tspan x="10" y="154">  │ ├── pause-stream@0.0.11 </tspan>
+<tspan x="10" y="170">  │ ├── split@0.2.10 </tspan>
+<tspan x="10" y="186">  │ ├── stream-combiner@0.0.4 </tspan>
+<tspan x="10" y="202">  │ └── through@2.3.8 </tspan>
+<tspan x="10" y="218">  ├── lodash@0.8.2 </tspan>
+<tspan x="10" y="234">  ├─┬ natural@0.1.29 </tspan>
+<tspan x="10" y="250">  │ ├── apparatus@0.0.9 </tspan>
+<tspan x="10" y="266">  │ ├── sylvester@0.0.21 </tspan>
+<tspan x="10" y="282">  │ └── underscore@1.8.3 </tspan>
+<tspan x="10" y="298">  └── underscore.string@2.3.3</tspan>
 </text>
 </svg>
